@@ -30,11 +30,14 @@ dependencies {
 }
 
 jar {
-    manifest {
-        attributes 'Main-Class': 'Main'
-    }
-}
+  manifest { 
+    attributes "Main-Class": "$mainClassName"
+  }  
 
+  from {
+    configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+  }
+}
 // Define the main class for the application
 mainClassName = 'Main'
 
