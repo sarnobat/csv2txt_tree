@@ -31,10 +31,10 @@ dependencies {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'App'
+        attributes 'Main-Class': 'Main'
     }
 }
 
 // Define the main class for the application
-mainClassName = 'App'
+mainClassName = 'Main'
 
