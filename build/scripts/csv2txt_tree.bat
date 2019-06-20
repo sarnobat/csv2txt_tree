@@ -79,7 +79,7 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\csv2txt_tree.jar;%APP_HOME%\lib\guava-28.0-jre.jar;%APP_HOME%\lib\failureaccess-1.0.1.jar;%APP_HOME%\lib\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;%APP_HOME%\lib\jsr305-3.0.2.jar;%APP_HOME%\lib\checker-qual-2.8.1.jar;%APP_HOME%\lib\error_prone_annotations-2.3.2.jar;%APP_HOME%\lib\j2objc-annotations-1.3.jar;%APP_HOME%\lib\animal-sniffer-annotations-1.17.jar
+set CLASSPATH=%APP_HOME%\lib\csv2txt_tree.jar;%APP_HOME%\lib\guava-28.0-jre.jar;%APP_HOME%\lib\json-20180813.jar;%APP_HOME%\lib\failureaccess-1.0.1.jar;%APP_HOME%\lib\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;%APP_HOME%\lib\jsr305-3.0.2.jar;%APP_HOME%\lib\checker-qual-2.8.1.jar;%APP_HOME%\lib\error_prone_annotations-2.3.2.jar;%APP_HOME%\lib\j2objc-annotations-1.3.jar;%APP_HOME%\lib\animal-sniffer-annotations-1.17.jar
 
 @rem Execute csv2txt_tree
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %CSV2TXT_TREE_OPTS%  -classpath "%CLASSPATH%" Main %CMD_LINE_ARGS%

@@ -30,6 +30,7 @@ dependencies {
     // For java 7
     //compile 'com.google.guava:guava:21.0'
     compile 'com.google.guava:guava:28.0-jre'
+    compile 'org.json:json:20180813'
 
 	// https://mvnrepository.com/artifact/com.google.guava/guava
 	//compile group: 'com.google.guava', name: 'guava', version: '28.0-jre'
