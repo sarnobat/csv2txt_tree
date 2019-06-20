@@ -9,6 +9,8 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 
+compileJava.options.forkOptions.executable = '/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/bin/javac'
+
 // Apply the application plugin to add support for building an application
 apply plugin: 'application'
 
@@ -18,16 +20,26 @@ apply plugin: 'eclipse'
 repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+    //jcenter()
+    jcenter { url "http://jcenter.bintray.com/"} 
+	//mavenCentral()
 }
 
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
-    compile 'com.google.guava:guava:21.0'
+    // For java 7
+    //compile 'com.google.guava:guava:21.0'
+    compile 'com.google.guava:guava:28.0-jre'
+
+	// https://mvnrepository.com/artifact/com.google.guava/guava
+	//compile group: 'com.google.guava', name: 'guava', version: '28.0-jre'
 
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
 }
+
+// Define the main class for the application
+mainClassName = 'Main'
 
 jar {
   manifest { 
@@ -38,6 +50,3 @@ jar {
     configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
   }
 }
-// Define the main class for the application
-mainClassName = 'Main'
-
